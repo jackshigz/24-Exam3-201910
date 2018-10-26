@@ -2,9 +2,9 @@
 Exam 3, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2018.
+         their colleagues and Haoran Shi.  October 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -89,6 +89,18 @@ def problem2(sequence):
     Type hints:
       :type sequence [list]
     """
+    largest = sequence[0]
+    to_return = 0
+    for k in range(0,len(sequence)):
+        if sequence[k]<0:
+            if sequence[k] < largest:
+                largest = sequence[k]
+                to_return = k
+        else:
+            if sequence[k] > largest:
+                largest = sequence[k]
+                to_return = k
+    return to_return
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
