@@ -97,7 +97,7 @@ def problem2(sequence):
                 largest = sequence[k]
                 to_return = k
         else:
-            if sequence[k] > largest:
+            if sequence[k] >= largest:
                 largest = sequence[k]
                 to_return = k
     return to_return

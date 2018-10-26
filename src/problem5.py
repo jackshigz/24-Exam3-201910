@@ -2,9 +2,9 @@
 Final exam, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Haoran Shi.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -212,8 +212,12 @@ def problem5(x):
     Type hints:
       :type x:    int
     """
+    for k in range(x,x+100000000000000000000000000):
+        if is_prime(k) == True:
+            if is_prime(sum_of_digits(k)) == True:
+                return k
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
