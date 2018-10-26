@@ -7,6 +7,7 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
+import math
 import testing_helper
 
 
@@ -89,20 +90,15 @@ def problem2(sequence):
     Type hints:
       :type sequence [list]
     """
-    largest = sequence[0]
+    largest = math.sqrt(sequence[0]*sequence[0])
     to_return = 0
     for k in range(0,len(sequence)):
-        if sequence[k]<0:
-            if sequence[k] < largest:
-                largest = sequence[k]
-                to_return = k
-        else:
-            if sequence[k] >= largest:
-                largest = sequence[k]
-                to_return = k
+        if math.sqrt(sequence[k]*sequence[k]) > largest:
+            largest = math.sqrt(sequence[k]*sequence[k])
+            to_return = k
     return to_return
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
